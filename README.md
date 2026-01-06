@@ -1,28 +1,41 @@
 # DevOps Final Project - Task Management API
 
-## 📋 Project Overview
+##  Project Overview
 
-This project represents my final assignment for the DevOps course, where I attempted to build an automated software delivery pipeline covering the main topics we studied throughout the semester. I chose to implement a simple Task Management API to demonstrate these concepts in a practical context.
+This project was developed as my final assignment for the DevOps course.
+The goal was to apply the main DevOps concepts covered during the semester
+by building an automated software delivery pipeline around a small but realistic application.
 
-The project incorporates **9 DevOps topics** from our curriculum:
+I chose to implement a simple Task Management API in order to focus on the DevOps workflow itself,
+rather than on complex application logic. This allowed me to experiment with CI/CD automation,
+security scanning, containerization, and deployment in a controlled environment.
 
-1. **Source Control** - Git with GitHub for version management
-2. **Branching Strategies** - GitFlow approach (main, develop, feature branches)
-3. **Continuous Integration** - Automated testing, linting, and security scanning
-4. **Continuous Delivery** - Automated deployment pipeline to Kubernetes
-5. **Security** - SAST scanning using SonarQube and Semgrep, plus container vulnerability checks
-6. **Docker** - Application containerization
-7. **Kubernetes** - Container orchestration and deployment (mandatory component)
-8. **Infrastructure as Code** - Terraform configurations for cloud resources
-9. **Database Changes** - Automated SQL migrations with testing
+The project covers the following DevOps topics from the course curriculum:
 
-### 🎯 Deep Dive Topic: SAST (Static Application Security Testing)
+- **Source Control** – Git with GitHub for version management  
+- **Branching Strategy** – GitFlow approach using `main`, `develop`, and feature branches  
+- **Continuous Integration** – Automated testing, linting, and security scans  
+- **Continuous Delivery** – Automated deployment pipeline targeting Kubernetes  
+- **Security** – SAST scanning with SonarQube and Semgrep, along with container vulnerability checks  
+- **Docker** – Application containerization  
+- **Kubernetes** – Container orchestration and deployment (mandatory course requirement)  
+- **Infrastructure as Code** – Terraform configurations for provisioning cloud resources  
+- **Database Changes** – Automated SQL migrations with basic validation and testing  
 
-For my deep dive component, I chose to explore Static Application Security Testing in detail. I focused on understanding how SAST tools integrate into modern pipelines and what types of vulnerabilities they can detect. The implementation includes both Semgrep and SonarQube, which allowed me to compare different approaches to static analysis.
+###  Deep Dive Topic: SAST (Static Application Security Testing)
+
+For the deep dive component of this project, I focused on Static Application Security Testing (SAST).
+The goal was to better understand how SAST tools are integrated into modern CI/CD pipelines
+and what types of vulnerabilities can realistically be detected at this stage.
+
+I chose to work with both Semgrep and SonarQube in order to compare different approaches to static analysis.
+Using two tools made it easier to observe their strengths and limitations,
+as well as the differences in configuration, rule sets, and reporting. This comparison helped me better understand which types of issues are better suited for static analysis
+and which would require additional security measures at later stages of the pipeline.
 
 ---
 
-## 🏗️ High-Level Solution Design
+##  High-Level Solution Design
 
 The overall architecture follows a standard CI/CD pattern. When code is pushed to the repository, GitHub Actions automatically triggers a series of validation and deployment steps:
 
@@ -51,7 +64,7 @@ Developer → Git Push → GitHub Actions Pipeline
 
 ---
 
-## 🔧 Low-Level Solution Design
+##  Low-Level Solution Design
 
 For the implementation, I selected technologies that are commonly used in industry and that we covered during the course. The choices were also influenced by available documentation and community support.
 
@@ -78,7 +91,7 @@ For the implementation, I selected technologies that are commonly used in indust
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 DevOps/
@@ -117,7 +130,7 @@ DevOps/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -161,7 +174,7 @@ docker-compose up --build
 
 ---
 
-## 🔄 CI/CD Pipeline Workflow
+##  CI/CD Pipeline Workflow
 
 ### Feature Development Flow
 
@@ -183,7 +196,7 @@ docker-compose up --build
 
 ---
 
-## 🔐 Deep Dive: SAST Implementation
+##  Deep Dive: SAST Implementation
 
 ### What is SAST?
 
@@ -242,7 +255,7 @@ I chose to implement two SAST tools to understand their different approaches:
 
 ---
 
-## ☸️ Kubernetes Deployment
+##  Kubernetes Deployment
 
 ### Deployment Strategy
 
@@ -287,7 +300,7 @@ kubectl rollout status deployment/task-api
 
 ---
 
-## 🗄️ Database Migrations
+##  Database Migrations
 
 Database schema changes are managed through Sequelize migrations, which provide version control for the database structure:
 
@@ -306,7 +319,7 @@ The pipeline includes a validation step that tests migrations against a clean te
 
 ---
 
-## 🧪 Testing Strategy
+##  Testing Strategy
 
 I implemented two levels of automated testing:
 
@@ -328,7 +341,7 @@ I implemented two levels of automated testing:
 
 ---
 
-## 🔮 Potential Improvements and Limitations
+##  Potential Improvements and Limitations
 
 While working on this project, I identified several areas where the solution could be extended or improved:
 
@@ -369,7 +382,7 @@ While working on this project, I identified several areas where the solution cou
 
 ---
 
-## 📊 Demo Preparation
+##  Demo Preparation
 
 ### Pre-Demo Environment Checklist
 
@@ -401,15 +414,10 @@ Based on the project requirements, I've organized the demonstration as follows:
 
 ---
 
-## 📄 License
+##  License
 
 This project is released under the MIT License - see the LICENSE file for details.
 
 ---
-
-## 👨‍💻 Author
-
-DevOps Final Project  
-Submitted: January 6, 2026
 
 **Acknowledgments**: This project builds upon concepts and best practices covered in the DevOps course curriculum. The implementation benefited from various open-source tools and community documentation.

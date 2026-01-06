@@ -1,0 +1,4 @@
+[33m2753e1c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m docs: Revise README.md for clarity and detail on project implementation and technologies used
+[33m83a6d96[m fix: Correct capitalization of 'DevOps' in README.md and DEPLOYMENT.md
+[33m5156b79[m feat: Initial commit of Task Management API with Kubernetes deployment
+[33m5d0c150[m Add initial README.md with project description, prerequisites, installation, usage, and license information
