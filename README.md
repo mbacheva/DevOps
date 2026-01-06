@@ -1,4 +1,4 @@
-# DevOPS Final Project - Task Management API
+# DevOps Final Project - Task Management API
 
 ## 📋 Project Overview
 
@@ -71,7 +71,7 @@ Developer → Git Push → GitHub Actions Pipeline
 ## 📁 Project Structure
 
 ```
-DevOPS/
+DevOps/
 ├── .github/
 │   └── workflows/
 │       └── ci-cd.yml           # Main CI/CD pipeline
@@ -122,7 +122,7 @@ DevOPS/
 ```bash
 # Clone repository
 git clone <repository-url>
-cd DevOPS
+cd DevOps
 
 # Install dependencies
 npm install
@@ -367,4 +367,4 @@ MIT License - see LICENSE file for details.
 
 ## 👨‍💻 Author
 
-DevOPS Final Project - January 2026
+DevOps Final Project - January 2026

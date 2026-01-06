@@ -20,7 +20,7 @@
 ### 1. Clone Repository
 ```bash
 git clone <your-repo-url>
-cd DevOPS
+cd DevOps
 ```
 
 ### 2. Install Dependencies
