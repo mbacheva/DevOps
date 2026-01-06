@@ -1,0 +1,32 @@
+# Semgrep configuration for security scanning
+rules:
+  - id: hardcoded-credentials
+    pattern: |
+      password = "..."
+    message: Hardcoded credentials detected
+    severity: ERROR
+    languages: [javascript]
+    
+  - id: sql-injection
+    pattern-either:
+      - pattern: |
+          $QUERY = "SELECT * FROM " + $INPUT
+      - pattern: |
+          $DB.query($SQL + $INPUT)
+    message: Possible SQL injection vulnerability
+    severity: ERROR
+    languages: [javascript]
+    
+  - id: command-injection
+    pattern-either:
+      - pattern: exec($INPUT)
+      - pattern: execSync($INPUT)
+    message: Possible command injection
+    severity: ERROR
+    languages: [javascript]
+    
+  - id: insecure-random
+    pattern: Math.random()
+    message: Math.random() is not cryptographically secure. Use crypto.randomBytes() instead
+    severity: WARNING
+    languages: [javascript]
